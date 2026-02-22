@@ -397,3 +397,37 @@ footer {
   color: #555;
   line-height: 1.5;
 }
+
+
+
+
+
+/* ===============================
+   SEPARADOR DE SECCIONES (INDEX)
+================================ */
+
+.section {
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0,0,0,0.15),
+    transparent
+  );
+}
+
+/* Última sección sin separador */
+.section:last-child::after {
+  display: none;
+}
