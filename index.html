@@ -2,116 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Comunidad</title>
+  <title>Inicio | Mi Comunidad</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS GENERAL -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Firebase (SDK v9 modular) -->
-  <script type="module">
-    // ⚠️ CONFIGURACIÓN FIREBASE (REEMPLAZAR LUEGO)
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
-
-    const firebaseConfig = {
-      apiKey: "TU_API_KEY",
-      authDomain: "TU_PROYECTO.firebaseapp.com",
-      databaseURL: "https://TU_PROYECTO-default-rtdb.firebaseio.com",
-      projectId: "TU_PROYECTO",
-      storageBucket: "TU_PROYECTO.appspot.com",
-      messagingSenderId: "XXXX",
-      appId: "XXXX"
-    };
-
-    // Inicializar Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-
-    // Exponer database globalmente (temporal)
-    window.db = database;
-  </script>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>🌐 Mi Comunidad</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="videos.html">Videos</a>
-      <a href="chat.html">Chat</a>
-      <a href="sugerencias.html">Sugerencias</a>
-      <a href="encuestas.html">Encuestas</a>
-    </nav>
-  </header>
+  <!-- HEADER DINÁMICO -->
+  <div id="header"></div>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main>
-
-    <!-- ESTADO DEL STREAM -->
-    <section id="stream-status" class="card">
-      <h2>🔴 Estado del Stream</h2>
-      <p id="stream-live">Cargando estado...</p>
-      <p id="stream-title"></p>
-      <p id="stream-category"></p>
-    </section>
-
-    <!-- VIDEO DESTACADO -->
-    <section id="featured-video" class="card">
-      <h2>🎥 Video Destacado</h2>
-      <div id="video-container">
-        <p>No hay video destacado aún.</p>
-      </div>
-    </section>
-
-    <!-- MENSAJE DEL DÍA -->
-    <section id="daily-message" class="card">
-      <h2>💬 Mensaje del Día</h2>
-      <p id="message-text">Cargando mensaje...</p>
-      <small id="message-author"></small>
-    </section>
-
-    <!-- MÚSICA ACTUAL -->
-    <section id="music-now" class="card">
-      <h2>🎶 Sonando en la Comunidad</h2>
-      <p id="music-info">Nada sonando ahora mismo</p>
-    </section>
-
-    <!-- ENCUESTA ACTIVA (PREVIEW) -->
-    <section id="active-poll" class="card">
-      <h2>🗳️ Encuesta Activa</h2>
-      <p id="poll-question">No hay encuestas activas</p>
-      <ul id="poll-options"></ul>
-    </section>
-
-    <!-- ÚLTIMAS SUGERENCIAS -->
-    <section id="latest-suggestions" class="card">
-      <h2>💡 Últimas Sugerencias</h2>
-      <ul id="suggestions-list">
-        <li>Cargando sugerencias...</li>
-      </ul>
-    </section>
-
-    <!-- REDES -->
-    <section id="socials" class="card">
-      <h2>🌐 Nuestras Redes</h2>
-      <a href="#" target="_blank">Twitch</a> |
-      <a href="#" target="_blank">YouTube</a> |
-      <a href="#" target="_blank">Instagram</a> |
-      <a href="#" target="_blank">Discord</a>
-    </section>
-
+    <h2>Bienvenido a la comunidad</h2>
+    <p>Este es el hub central del stream.</p>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 - Comunidad creada en stream</p>
-  </footer>
+  <!-- FOOTER DINÁMICO -->
+  <div id="footer"></div>
 
-  <!-- JS GENERAL -->
   <script type="module" src="js/main.js"></script>
-
 </body>
 </html>
