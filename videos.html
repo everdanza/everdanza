@@ -1,11 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Videos | Mi Comunidad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Firebase config (solo una vez por página) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_PROYECTO.firebaseapp.com",
+      databaseURL: "https://TU_PROYECTO-default-rtdb.firebaseio.com",
+      projectId: "TU_PROYECTO",
+      storageBucket: "TU_PROYECTO.appspot.com",
+      messagingSenderId: "XXXX",
+      appId: "XXXX"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getDatabase(app);
+  </script>
+</head>
+
+<body>
+
+<header>
+  <h1>🌐 Mi Comunidad</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="videos.html">Videos</a>
+    <a href="chat.html">Chat</a>
+    <a href="sugerencias.html">Sugerencias</a>
+    <a href="encuestas.html">Encuestas</a>
+  </nav>
+</header>
+
 <main>
   <h2>🎥 Videos de la Comunidad</h2>
-
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/VIDEO_ID"
-      title="Video"
-      allowfullscreen>
-    </iframe>
+  <div id="videos-container">
+    <p>Cargando videos...</p>
   </div>
 </main>
+
+<footer>
+  <p>© 2026 - Mi Comunidad</p>
+</footer>
+
+<!-- JS -->
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/videos.js"></script>
+
+</body>
+</html>
