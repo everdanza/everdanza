@@ -19,13 +19,18 @@ function loadComponent(id, file) {
     .catch(err => console.error(err));
 }
 
-/* MENÚ HAMBURGUESA (event delegation) */
+/* ===============================
+   MENÚ HAMBURGUESA
+================================ */
+
 document.addEventListener("click", (e) => {
-  const toggle = e.target.closest(".menu-toggle");
+
+  const toggle = e.target.closest("#menuToggle");
   if (!toggle) return;
 
-  const nav = document.querySelector(".nav");
-  if (nav) {
-    nav.classList.toggle("active");
-  }
+  const navLinks = document.getElementById("navLinks");
+  if (!navLinks) return;
+
+  navLinks.classList.toggle("active");
+
 });
