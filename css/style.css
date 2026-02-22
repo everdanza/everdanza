@@ -8,10 +8,22 @@ body {
   background-color: #f4f4f4;
 }
 
-header {
-  background: #222;
+/* ===== HEADER CON IMAGEN ===== */
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+
+  background-image: url("../imagenes/Picsart_26-02-22_10-41-30-010.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
   color: white;
-  padding: 1rem;
 }
 
 nav a {
@@ -204,4 +216,5 @@ footer {
   }
 
   }
+
 
