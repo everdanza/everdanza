@@ -177,3 +177,29 @@ footer {
     display: none; /* solo logo en mobile */
   }
 }
+
+
+
+
+
+
+
+/* ===== AJUSTES LOGO MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo img {
+    height: 56px; /* antes 42px */
+  }
+
+  .logo-text {
+    display: inline;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  }
